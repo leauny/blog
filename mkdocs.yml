@@ -1,3 +1,74 @@
-site_name: leauny's notes
+site_name: leauny的随笔
+site_url: https://blog.leauny.top/
+repo_name: leauny/blog
+repo_url: https://github.com/leauny/blog/
+edit_uri: tree/master/docs
+site_description: leauny的随笔
+copyright: Copyright &copy; 2022-2024 <a href="https://github.com/leauny" target="_bland" rel="noopener">leauny</a>
+
 theme:
   name: material
+  font: false
+  language: 'zh'
+  icon:
+    logo: material/notebook-outline
+  palette: 
+    # Palette toggle for light mode
+    - scheme: default
+      primary: teal
+      toggle:
+        icon: material/brightness-7 
+        name: Switch to dark mode
+    # Palette toggle for dark mode
+    - scheme: slate
+      primary: teal
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - toc.integrate
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - content.tabs.link
+    - content.code.annotation
+    - content.code.copy
+
+markdown_extensions:
+  - toc:
+      permalink: true
+      toc_depth: 4
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - admonition
+  # Formula support
+  - pymdownx.arithmatex:
+      generic: true
+  - footnotes
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.mark
+  - attr_list
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+
+extra_javascript:
+  # Formula
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js
+
+extra:
+  social:
+    - icon: fontawesome/brands/github-alt
+      link: https://github.com/leauny
+  
+nav:
+  - Home:
+    - index.md
+  - Tools:
+    - tools/MkDocs手册.md

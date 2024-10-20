@@ -1,6 +1,10 @@
-# Welcome to leauny's blog
+---
+hide:
+    - date
+home: true
+statistics: true
+---
 
-## CS
+# o(〃'▽'〃)o Hi!
 
-- [算法随想录笔记](https://www.yuque.com/leauny/algo)
-
+这里是leauny的个人随笔哦！  
